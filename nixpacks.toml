@@ -1,5 +1,10 @@
 [phases.build]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = [
+    "composer install --no-dev --optimize-autoloader",
+    "mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache",
+    "chown -R www-data:www-data storage bootstrap/cache",
+    "chmod -R 777 storage bootstrap/cache"
+]
 
 [start]
 cmd = "php -S 0.0.0.0:$PORT -t public/"
