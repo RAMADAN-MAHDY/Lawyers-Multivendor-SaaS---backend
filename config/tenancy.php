@@ -20,7 +20,7 @@ return [
         'api-lawyers.abdaealmasi.store',
         '127.0.0.1',
         'localhost',
-        'lawyers-multivendor-saas-backend-production.up.railway.app'
+        'serene-renewal-production.up.railway.app'
         ,
     ],
 
