@@ -7,4 +7,4 @@ cmds = [
 ]
 
 [start]
-cmd = "php -S 0.0.0.0:$PORT -t public/"
+cmd = "mkdir -p /app/storage/framework/{sessions,views,cache,testing} /app/storage/logs /app/bootstrap/cache && php -S 0.0.0.0:$PORT -t public/"
