@@ -161,8 +161,10 @@ Route::middleware([
 
         // مأموريات الموظفين
         Route::get('missions', [MissionController::class, 'index']);
+
+        // مسار خاص باشتراكات المستأجر
+        Route::get('/my-subscriptions', [SubscriptionController::class, 'index'])->name('tenant.my-subscriptions.index');
     });
-    Route::get('subscriptions', [SubscriptionController::class, 'index']);
     // تقرير ميزان المراجعة
     Route::get('trial-balance', [TrialBalanceController::class, 'index']);
     Route::get('account-statement', [AccountStatementController::class, 'index']);
