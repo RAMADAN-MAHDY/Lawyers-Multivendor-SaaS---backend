@@ -19,7 +19,8 @@ return [
     'central_domains' => [
         'api-lawyers.abdaealmasi.store',
         '127.0.0.1',
-        'localhost'
+        'localhost',
+        'lawyers-multivendor-saas-backend-production.up.railway.app'
         ,
     ],
 
