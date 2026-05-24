@@ -1,10 +1,10 @@
 [phases.build]
 cmds = [
     "composer install --no-dev --optimize-autoloader",
-    "mkdir -p storage/framework/{sessions,views,cache,testing} storage/logs bootstrap/cache",
+    "mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache storage/framework/testing storage/logs bootstrap/cache",
     "chown -R www-data:www-data storage bootstrap/cache",
     "chmod -R 777 storage bootstrap/cache"
 ]
 
 [start]
-cmd = "php -S 0.0.0.0:$PORT -t public/"
+cmd = "mkdir -p /app/storage/framework/sessions /app/storage/framework/views /app/storage/framework/cache /app/storage/framework/testing /app/storage/logs /app/bootstrap/cache && php -S 0.0.0.0:$PORT -t public/"
