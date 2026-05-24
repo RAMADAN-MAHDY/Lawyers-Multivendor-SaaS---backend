@@ -13,7 +13,8 @@ return new class extends Migration
     {
     Schema::create('accounts', function (Blueprint $table) {
     $table->id();
-$table->foreignId('tenant_id')->constrained('tenants')->cascadeOnDelete();
+$table->string('tenant_id');
+            $table->foreign('tenant_id')->references('id')->on('tenants')->cascadeOnDelete();
     $table->string('name');
     $table->enum('status', ['debitor', 'creditor']); // طبيعة الحساب
     $table->foreignId('parent_id')->nullable()
